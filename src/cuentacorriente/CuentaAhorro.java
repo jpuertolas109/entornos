@@ -11,6 +11,7 @@ package cuentacorriente;
  */
 public class CuentaAhorro extends CuentaCorriente {
 
+
     private double interes;
 
     public CuentaAhorro(String titular, String numCuenta) {
@@ -25,4 +26,13 @@ public class CuentaAhorro extends CuentaCorriente {
     public void calcularInteres() {
         setSaldo(getSaldo() - (getSaldo() * (this.interes / 100)));
     }
+
+   public CuentaAhorro (String nombre, String cuenta, double saldo, double interes){
+       super(nombre,cuenta,saldo,0);
+       this.interes=interes;
+       
+   }
+    
+   
+
 }
